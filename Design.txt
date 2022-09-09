@@ -1,0 +1,19 @@
+For my final project puzzle slider there were some decisions I made that would affect what I later did in the program.
+I decided to make three main classes that would handle the whole project. BoardLayout, PuzzleClicks, and Leaderboard.
+
+The BoardLayout class took care of the static graphics of the board as well as the screens that would be used when an
+event like a loss, win or quit. This helped me keep organize, but later I would have to call BoardLayout methods in
+other classes which made it more confusing in the end since I needed to import other classes for other classes to be
+able to use their methods.
+
+In PuzzleClicks I took care of all the changing puzzle components such as player moves, puzzle loading, and thumbnail. I
+used turtle to be each of my puzzle pieces which made swapping pieces a lot easier for me. The only problem I can see
+arising is that the last turtle will always be my blank but the puzzles file format might not account for this, so it
+would have been better to somehow assign the turtle to the string of text correlating to where the location of the image
+piece is. I also decided to use the shuffled list to keep track of the order of the pieces and had to swap the positions
+of the list elements when I swapped a puzzle piece. I also didn't need the name for the class since it was only used
+once the player won it would be plugged into the Leaderboard class with the moves taken.
+
+In the Leaderboard class since I was having trouble sorting the ranking I eventually turned the leaderboard data into a
+nested list so that I could use the sorted function with a lambda temp function to sort each of the items by moves. I
+then used this to write my leaderboard.
